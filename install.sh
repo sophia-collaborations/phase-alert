@@ -10,7 +10,7 @@ else
   (
     echo
     echo PROJECT NAME NOT FOUND
-    pwd
+    echo "$(pwd)/proj-info/proj-name.txt"
     echo
   ) > /dev/stderr
   exit 3
