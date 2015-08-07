@@ -42,3 +42,16 @@ if [ -f "after-install.sh" ]; then
   exec sh after-install.sh
 fi
 
+# Prepare environment for extra compilation instructions:
+
+MY_DESTINA_BIN="${destina}"
+export MY_DESTINA_BIN
+
+if [ -f "extra-install.sh" ]; then
+  exec sh extra-install.sh
+fi
+
+
+
+
+
