@@ -24,6 +24,15 @@ $mid_scrip = $rsd . "/pre-inform.sh";
 $end_scrip = $rsd . "/end-inform.sh";
 
 
+&argola::setopt("-m",\&my_opt_m);
+sub my_opt_m {
+  $crownarg = &argola::getrg;
+}
+
+
+&argola::runopts("phase-alert");
+
+
 sub nowo {
   my $lc_a;
   $lc_a = `date +%s`; chomp($lc_a);
